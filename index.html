@@ -9,69 +9,154 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fc; /* Light background for better readability */
+      color: #333;
     }
+
+    /* Hero Section */
     .hero {
       text-align: center;
-      padding: 30px; /* Reduced padding to minimize the gap */
-      background-color: #f0f0f0; /* Change this value to your desired background color */
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #74b9ff, #a29bfe); /* Soft gradient */
+      color: white;
       animation: fadeIn 2s;
+      position: relative;
+      overflow: hidden;
     }
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      margin-top: 20px;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      border: 3px solid white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
     nav ul {
       display: flex;
       list-style: none;
       justify-content: center;
-      padding: 0;
+      padding: 10px 0;
+      margin: 0;
     }
+
     nav ul li {
-      margin: 0 10px;
+      margin: 0 15px;
     }
+
     nav ul li a {
       text-decoration: none;
-      color: #007BFF;
-    }
-    section {
-      padding: 15px; /* Reduced padding to minimize gaps */
-      text-align: center;
-    }
-    .profile-pic {
-      margin-top: 20px;
-      border-radius: 50%; /* Makes the image circular if it's square */
-      width: 150px; /* Adjust size as needed */
-      height: 150px; /* Maintain proportions */
-    }
-    .linkedin-link {
-      color: #0077b5; /* LinkedIn blue */
-      text-decoration: none;
+      color: #74b9ff;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
-    .linkedin-link:hover {
-      text-decoration: underline;
+
+    nav ul li a:hover {
+      color: #0984e3;
     }
-    button {
+
+    /* Section Styles */
+    section {
+      padding: 40px 20px;
       margin: 20px auto;
+      max-width: 800px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1.5s;
+    }
+
+    section h2 {
+      color: #2d3436;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    section p {
+      line-height: 1.6;
+    }
+
+    /* Buttons */
+    button {
       display: block;
+      margin: 20px auto;
       padding: 10px 20px;
-      background-color: #007BFF;
-      color: #fff;
+      background-color: #74b9ff;
+      color: white;
       border: none;
       border-radius: 5px;
+      font-size: 1rem;
       cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
+
     button:hover {
-      background-color: #0056b3;
+      background-color: #0984e3;
+      transform: scale(1.05);
     }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding: 10px;
-      background-color: #f0f0f0;
+      padding: 20px;
+      background-color: #2d3436;
+      color: white;
+      font-size: 0.9rem;
     }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Dark Mode */
     body.dark-mode {
       background-color: #121212;
       color: #ffffff;
+    }
+
+    body.dark-mode nav ul li a {
+      color: #74b9ff;
+    }
+
+    body.dark-mode section {
+      background-color: #1e1e1e;
+      box-shadow: none;
+    }
+
+    body.dark-mode footer {
+      background-color: #1e1e1e;
     }
   </style>
 </head>
@@ -79,7 +164,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1 class="animate__animated animate__fadeIn">Welcome to My GitHub Pages Site</h1>
+    <h1 class="animate__animated animate__fadeIn">Welcome to My (GitHub Pages) Site</h1>
     <p>Here you can learn more about me</p>
     <!-- Profile Picture -->
     <img src="images/OI000555.jpg" alt="Profile Picture" class="profile-pic">
