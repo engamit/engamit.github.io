@@ -4,138 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to My (GitHub Pages) Site</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    /* General Styles */
     body {
       font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #ff7e5f, #feb47b);
-      color: #fff;
-      overflow-x: hidden;
     }
-    h1, h2 {
-      color: #fffae3;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    .hero {
+      text-align: center;
+      padding: 30px; /* Reduced padding to minimize the gap */
+      background-color: #f0f0f0; /* Change this value to your desired background color */
+      animation: fadeIn 2s;
     }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
     nav ul {
       display: flex;
       list-style: none;
       justify-content: center;
-      padding: 10px;
-      margin: 0;
-      background: rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      padding: 0;
     }
     nav ul li {
-      margin: 0 15px;
+      margin: 0 10px;
     }
     nav ul li a {
       text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      transition: color 0.3s ease;
+      color: #007BFF;
     }
-    nav ul li a:hover {
-      color: #ffd700;
-    }
-
-    /* Section Styles */
     section {
-      padding: 60px 20px;
+      padding: 15px; /* Reduced padding to minimize gaps */
       text-align: center;
-      min-height: 100vh;
     }
-    #about {
-      background: rgba(0, 0, 0, 0.2);
+    .profile-pic {
+      margin-top: 20px;
+      border-radius: 50%; /* Makes the image circular if it's square */
+      width: 150px; /* Adjust size as needed */
+      height: 150px; /* Maintain proportions */
     }
-    #contact {
-      background: rgba(255, 255, 255, 0.2);
+    .linkedin-link {
+      color: #0077b5; /* LinkedIn blue */
+      text-decoration: none;
+      font-weight: bold;
     }
-
-    /* Button Styles */
+    .linkedin-link:hover {
+      text-decoration: underline;
+    }
     button {
       margin: 20px auto;
       display: block;
       padding: 10px 20px;
-      background-color: #ffd700;
-      color: #000;
+      background-color: #007BFF;
+      color: #fff;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-      transition: transform 0.3s ease, background-color 0.3s ease;
     }
     button:hover {
-      background-color: #fff;
-      transform: scale(1.1);
+      background-color: #0056b3;
     }
-
-    /* Floating Shapes */
-    .floating-shapes {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: rgba(255, 255, 255, 0.5);
-      border-radius: 50%;
-      animation: float 5s infinite ease-in-out;
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #f0f0f0;
     }
-    .floating-shapes:nth-child(1) {
-      top: 10%;
-      left: 5%;
-      animation-duration: 6s;
-    }
-    .floating-shapes:nth-child(2) {
-      top: 50%;
-      left: 20%;
-      animation-duration: 8s;
-    }
-    .floating-shapes:nth-child(3) {
-      top: 30%;
-      left: 70%;
-      animation-duration: 4s;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0); }
-    }
-
-    /* Dark Mode */
     body.dark-mode {
-      background: linear-gradient(to right, #141e30, #243b55);
-      color: #ddd;
-    }
-    body.dark-mode h1, body.dark-mode h2 {
-      color: #fff;
+      background-color: #121212;
+      color: #ffffff;
     }
   </style>
 </head>
 <body>
 
-  <!-- Floating Shapes -->
-  <div class="floating-shapes"></div>
-  <div class="floating-shapes"></div>
-  <div class="floating-shapes"></div>
-  <div class="floating-shapes"></div>
-  <div class="floating-shapes"></div>
-  <div class="floating-shapes"></div>
-
   <!-- Hero Section -->
   <section class="hero">
-    <h1 class="animate__animated animate__zoomIn">Welcome to My (GitHub Pages) Site</h1>
-    <p class="animate__animated animate__fadeInUp">Explore my content and learn more about me!</p>
+    <h1 class="animate__animated animate__fadeIn">Welcome to My GitHub Pages Site</h1>
+    <p>Here you can learn more about me</p>
+    <!-- Profile Picture -->
+    <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
   </section>
 
   <!-- Navigation Bar -->
@@ -150,7 +97,7 @@
   <section id="about">
     <h2>About Me</h2>
     <p>I'm a software engineer and team leader passionate about technology and people. I enjoy coding, solving problems, and learning new stuff!</p>
-    <p>Connect with me on <a href="https://www.linkedin.com/in/amitengel/" class="linkedin-link" target="_blank">LinkedIn <i class="fab fa-linkedin"></i></a>.</p>
+    <p>Connect with me on <a href="https://www.linkedin.com/in/amitengel/" class="linkedin-link" target="_blank">LinkedIn</a>.</p>
   </section>
 
   <!-- Contact Section -->
