@@ -1,11 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Engamit</title>
-  </head>
-  <body>
-    <h1>Welcome to my GitHub Pages site!</h1>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My GitHub Pages Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px;
+      background-color: #f0f0f0;
+      animation: fadeIn 2s;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+    .linkedin-link {
+      color: #0077b5; /* LinkedIn blue */
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .linkedin-link:hover {
+      text-decoration: underline;
+    }
+    button {
+      margin: 20px auto;
+      display: block;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #f0f0f0;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="animate__animated animate__fadeIn">Welcome to My GitHub Pages Site</h1>
+    <p>Here you can learn more about me</p>
+  </section>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm a software engineer and team leader passionate about technology and people. I enjoy coding, solving problems, and learning new stuff!</p>
+    <p>Connect with me on <a href="https://www.linkedin.com/in/amitengel/" class="linkedin-link" target="_blank">LinkedIn</a>.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mjvdpdvl" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br><br>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <br><br>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Dark Mode Toggle -->
+  <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Amit Engel. All rights reserved.</p>
+  </footer>
+
+</body>
 </html>
